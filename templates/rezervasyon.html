@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rezervasyon</title>
+</head>
+<body>
+    <h2>Yeni Rezervasyon</h2>
+    <form method="POST">
+        Ad Soyad: <input type="text" name="ad"><br>
+        Telefon: <input type="text" name="tel"><br>
+        Giriş Tarihi: <input type="date" name="giris"><br>
+        Çıkış Tarihi: <input type="date" name="cikis"><br>
+        Oda:
+        <select name="oda">
+            {% for oda in odalar %}
+            <option value="{{ oda.id }}">Oda {{ oda.id }} - {{ oda.tip }} ({{ oda.fiyat }}₺)</option>
+            {% endfor %}
+        </select><br>
+        <button type="submit">Kaydet</button>
+    </form>
+</body>
+</html>

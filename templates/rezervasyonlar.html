@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rezervasyonlar</title>
+</head>
+<body>
+    <h2>Yapılmış Rezervasyonlar</h2>
+    <a href="/">Geri Dön</a>
+    <ul>
+        {% for r in rezervasyonlar %}
+        <li>
+            Oda {{ r.oda_id }} | {{ r.ad }} | {{ r.tel }} | {{ r.giris }} - {{ r.cikis }}
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

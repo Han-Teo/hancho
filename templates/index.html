@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Otel Odaları</title>
+</head>
+<body>
+    <h2>25 Odalı Otel - Oda Listesi</h2>
+    <a href="/rezervasyon">Rezervasyon Yap</a> |
+    <a href="/rezervasyonlar">Rezervasyonlar</a>
+    <ul>
+        {% for oda in odalar %}
+            <li>Oda {{ oda.id }} | Tip: {{ oda.tip }} | Yatak: {{ oda.yatak }} | Fiyat: {{ oda.fiyat }}₺</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
